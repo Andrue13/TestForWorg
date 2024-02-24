@@ -520,12 +520,12 @@ park-item img {
 }
 
 .swiper-button-prev {
-    background-image: url(../icons/Arrow-left.svg);
+    background-image: url(icons/Arrow-left.svg);
     top: 140px;
 }
 
 .swiper-button-next {
-    background-image: url(../icons/Arrow-right.svg);
+    background-image: url(icons/Arrow-right.svg);
     top: 140px;
     left: 100px;
 }
@@ -541,11 +541,11 @@ park-item img {
 } 
 
 .swiper-button-next:active {
-    background-image: url(../icons/Arrow-right-blue.svg);
+    background-image: url(icons/Arrow-right-blue.svg);
 }
 
 .swiper-button-prev:active {
-    background-image: url(../icons/res.svg);
+    background-image: url(icons/res.svg);
 }
 
 
