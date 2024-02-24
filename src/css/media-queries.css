@@ -329,6 +329,10 @@
     .footer__span {
         display: none;
     }
+
+    .modal {
+        max-width: 320px;
+    }
 }
 
 @media (max-width: 320px) {
