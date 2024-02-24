@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_for_work</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body>
+    <section class="promo">
+        <div class="container">
+            <header class="header">
+                <div class="header__wrapper">
+                    <a href="#" class="header__logo">
+                        <img src="icons/Logo.svg" alt="logo">
+                    </a>
+                    <div class="header__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__menu">
+                            <li class="header__item"><a href="#services" class="header__link">Наши услуги</a></li>
+                            <li class="header__item"><a href="#about" class="header__link">Компания</a></li>
+                            <li class="header__item"><a href="#aero-park" class="header__link">Наш авиапарк</a> </li>
+                            <li class="header__item"><a href="#client" class="header__link">Клиенты</a></li>
+                            <li class="header__item"><a href="#address" class="header__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a class="header__contact" href="tel:+88001234567">8 800 123-45-67</a>
+            </header>
+            <div class="promo__box">
+                <h1 class="promo__title">Сайт для тестовой верстки чартерной авиакомпании </h1>
+                <h2 class="promo__subtitle">Jetair — лидер в области чартерных VIP перелетов по всему миру. Компания
+                    основана в 1996 году.</h2>
+            </div>
+            <div class="promo__container">
+                <img class="promo__container-img" src="icons/icon-01.svg" alt="medal">
+                <div class="promo__container-wrapper">
+                    <h2 class="promo__container-title">Лидер рынка</h2>
+                    <h3 class="promo__container-subtitle">№1 среди чартерных авиакомпаний по версии Flight Scaner
+                        magazine</h3>
+                </div>
+            </div>
+            <div class="booking">
+                <h2 class="booking__title">Забронировать частный борт</h2>
+                <form id="someform" class="booking__form" method="post">
+                    <input class="booking__input" name="name" type="text" placeholder="Ваше имя" required>
+                    <input class="booking__input" name="company" type="text" placeholder="Компания" required>
+                    <input class="booking__input" name="phone" placeholder="Телефон" required>
+                    <input class="button  button-booking_active" type="submit" data-modal="consultation" value="Забронировать" rel="reg_form"><br>
+                    <input class="Booking__checkbox" type="checkbox" id="coding" name="checkbox" value="coding" required >
+                    <label class="Booking__checkbox-label" for="coding">Я даю согласие на обработку своих персональных
+                        данных</label>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="services__title">Наши услуги</h2>
+            <h3 class="services__desc">Jetair – профессионал в области организации чартерных VIP перелетов по всему
+                миру: от Европы
+                до Азии, от Австралии до Америки. Богатый опыт и знание всех нюансов позволяют нам осуществить
+                любое пожелание клиента. Для нас нет ничего невозможного.</h3>
+            <div class="services__wrapper">
+                <div class="image-container">
+                    <a href="#" class="image-container__options">
+                        <img src="img/1.png" alt="jet">
+                    </a>
+                    <a href="#" class="image-container__text-overlay">
+                        Чартерные рейсы
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" class="image-container__options">
+                        <img src="img/2.png" alt="copter">
+                    </a>
+                    <a href="#" class="image-container__text-overlay">
+                        Аренда вертолета
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" class="image-container__options">
+                        <img src="img/3.png" alt="transportation">
+                    </a>
+                    <a href="#" class="image-container__text-overlay">
+                        Перевозка ценностей
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" class="image-container__options">
+                        <img src="img/4.png" alt="transfer">
+                    </a>
+                    <a href="#" class="image-container__text-overlay">
+                        Трансфер и сопровождение
+                    </a>
+                </div>
+            </div>
+            <div class="swiper  swiperPhone">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                            <img src="img/mobil1.png" alt="jet">
+                            <span>Чартерные рейсы</span> 
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="img/mobile2.png" alt="copter">
+                            <span>Аренда вертолета</span> 
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="img/mobile3.png" alt="transportation">
+                            <span>Перевозка ценностей</span> 
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="img/mobile4.png" alt="transfer">
+                            <span>Трансфер и<br> сопровождение</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="about__title">Компания</h2>
+            <h3 class="about__subtitle">Ощутите уникальные преимущества и высочайший комфорт, доверив свой полет
+                профессионалам</h3>
+            <h4 class="about__desc">За многие годы работы на рынке чартерных перевозок авиакомпания Jetair
+                зарекомендовала себя
+                надежным и безопасным перевозчиком с высоким уровнем сервиса на борту воздушного судна,
+                выполняя заказные рейсы не только в различные регионы РФ, но и в страны Восточной и Западной
+                Европы, Центральной и Восточной Азии.</h4>
+            <div class="about__wrapper">
+                <div class="about__item">
+                    <img src="icons/icon-02.svg" alt="cup">
+                    Команда профессионалов с опытом работы в сфере бизнес-авиации более 20 лет.
+                </div>
+                <div class="about__item">
+                    <img src="icons/icon-03.svg" alt="diamond">
+                    Исключительное качество сервиса – высшая ценность нашей работы. Мы не просто следуем самым высоким
+                    мировым стандартам качества. Мы поднялипланку еще выше, что позволяет нам ревосходить ожидания самых
+                    взыскательных клиентов.
+                </div>
+                <div class="about__item">
+                    <img src="icons/icon-04.svg" alt="headphones">
+                    Ваш личный менеджер уделит особое внимание Вашим потребностям и пожеланиям. Каждая деталь Вашего
+                    путешествия будет продумана до мелочей, чтобы Вы могли полностью насладиться полетом
+                </div>
+                <div class="about__item">
+                    <img src="icons/icon-05.svg" alt="umbrella">
+                    Ваша безопасность – наша первоочередная задача. Мы выбираем самых надежных партнеров, которые
+                    отвечают самым строгим требованиям безопасности полетов.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aero-park" id="aero-park">
+        <div class="container">
+            <h2 class="aero-park__title">Наш авиапарк</h2>
+            <div class="aero-park__wrapper">
+                <div class="park-item">
+                    <img src="img/737.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Boeing 737-800 Max VIP<br>
+                        <span class="park-item__span">Дальность полета — 10 800 м
+                            Вместимость — 44 человека</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/a320.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Airbus A320 VIP<br>
+                        <span class="park-item__span">
+                            Дальность полета — 9 600 м
+                            Вместимость — 33 человека</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/airbus-a320-neo.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Airbus A320 Neo VIP<br>
+                        <span class="park-item__span">Дальность полета — 11 100 м
+                            Вместимость — 22 человека</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/a220.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Airbus A220-10<br>
+                        <span class="park-item__span">
+                            Дальность полета — 8 500 м
+                            Вместимость — 20 человек</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/falcon_10x.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Falcon 10X<br>
+                        <span class="park-item__span">
+                            Дальность полета — 7 500 м
+                            Вместимость — 11 человек</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/falcon_6x.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Falcon 8X<br>
+                        <span class="park-item__span">
+                            Дальность полета — 7 500 м
+                            Вместимость — 13 человек</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/Agusta_Westland_109_1.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Agusta Westland 109<br>
+                        <span class="park-item__span">
+                            Дальность полета — 2 500 м
+                            Вместимость — 7 человек</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/Bell_407_1.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Bell 407<br>
+                        <span class="park-item__span">
+                            Дальность полета — 1 500 м
+                            Вместимость — 5 человек</span>
+                    </div>
+                </div>
+                <div class="park-item">
+                    <img src="img/Eurocopter.png" alt="cup">
+                    <div class="park-item__wrapper">
+                        Eurocopter AS350 B3<br>
+                        <span class="park-item__span">
+                            Дальность полета — 1 200 м
+                            Вместимость — 4 человека</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="client" id="client">
+        <div class="container">
+            <h2 class="client__title">Клиенты</h2>
+            <h3 class="client__subtitle">Престижный клуб постоянных клиентов Jetair
+                стабильно расширяется. Наши клиенты ценят
+                в партнере надежность, качество
+                и ориентированы на долгосрочное
+                сотрудничество.</h3>
+            <!-- <div class="swiper-container"> -->
+            <div class="swiper  mySwiper2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/transneft.svg" alt="transneft-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/leroy-Merlin.svg" alt="leroy-Merlin-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/SGT.svg" alt="SGT-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/lukoil.svg" alt="lukoil-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/psb.svg" alt="psb-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/Severstal.svg" alt="Severstal-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="icons/kaustic.svg" alt="kaustic-logo">
+                            <div class="swiper-top"><span class="swiper-span">Петренко С. А.</span><br>
+                                Управляющий ООО «Леруа Мерлен ЮФО»
+                            </div>
+                        </div>
+                        <div class="swiper-desc">Отзыв от компании «Леруа Мерлен». На российский рынок компания
+                            вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети
+                            началось с 2005
+                            года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту,
+                            обороту и
+                            объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних
+                            площадках с
+                            «Ашан», их площадь колеблется от 8000 до 20 000 м².
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button class="swiper-button-next"></button>
+                    <button class="swiper-button-prev"></button>
+                </div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="icons/transneft.svg" alt="transneft-logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="icons/leroy-Merlin.svg" alt="leroy-Merlin-logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="icons/SGT.svg" alt="SGT-logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="icons/lukoil.svg" alt="lukoil-logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="icons/psb.svg" alt="psb-logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="icons/Severstal.svg" alt="Severstal-logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="icons/kaustic.svg" alt="kaustic-logo">
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </section>
+    <section class="address" id="address">
+        <div class="container">
+            <h2 class="address__title">Контакты</h2>
+            <div class="address_wrapper">
+                <div class="address__box">
+                    <div class="address__phone">8 800 123-45-67<br>
+                        +7 123 456-78-90</div>
+                    <address class="address__add"><span class="address__span">Адрес</span><br>
+                        Московская обл., г. Химки, а/п Шереметьево,
+                        терминал А
+                    </address>
+                    <div class="address__email">
+                        E-mail <br>
+                        <a href="mailto:mail@jetair.ru">mail@jetair.ru</a>
+                    </div>
+                </div>
+                <div class="address__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17863.110413353435!2d37.387979209062934!3d55.968629270853015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53c20c24e7149%3A0x5f49767ab403ed07!2z0KjQtdGA0LXQvNC10YLRjNC10LLQviAtINCw0Y3RgNC-0L_QvtGA0YIg0LjQvNC10L3QuCDQkC7QoS4g0J_Rg9GI0LrQuNC90LA!5e0!3m2!1sru!2sru!4v1708242775904!5m2!1sru!2sru"
+                        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="address__map-mobile">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17862.21174696654!2d37.38880387394646!3d55.9705757928297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53c20c24e7149%3A0x5f49767ab403ed07!2z0KjQtdGA0LXQvNC10YLRjNC10LLQviAtINCw0Y3RgNC-0L_QvtGA0YIg0LjQvNC10L3QuCDQkC7QoS4g0J_Rg9GI0LrQuNC90LA!5e0!3m2!1sru!2sru!4v1708706573211!5m2!1sru!2sru"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-booking">
+        <div class="container">
+            <div class="booking">
+                <h2 class="booking__title">Забронировать частный борт</h2>
+                <form id="someform-footer" class="booking__form" method="post">
+                    <input class="booking__input" name="name" type="text" placeholder="Ваше имя" required>
+                    <input class="booking__input" name="company" type="text" placeholder="Компания" required>
+                    <input class="booking__input" name="phone" placeholder="Телефон" required>
+                    <input class="button  button-booking_active" type="submit" data-modal="consultation"
+                        value="Забронировать" rel="reg_form"><br>
+                    <input class="Booking__checkbox" type="checkbox" id="coding-footer" name="checkbox" value="coding"
+                        required>
+                    <label class="Booking__checkbox-label" for="coding-footer">Я даю согласие на обработку своих
+                        персональных
+                        данных</label>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <h2 class="footer__title">© Jetair — сайт для тестовой верстки чартерной авиакомпании</h2>
+                <span class="footer__span">Политика конфиденциальности</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">
+                Спасибо за заявку!
+            </div>
+            <div class="modal__desc">
+                Мы свяжемся с вами в ближайшее время
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
