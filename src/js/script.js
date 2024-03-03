@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
         menuItem = document.querySelectorAll('.header__item'),
         hamburger = document.querySelector('.header__hamburger');
 
-        hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('header__hamburger_active');
         menu.classList.toggle('header__menu_active');
     });
@@ -18,30 +18,102 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 $(document).ready(function (e) {
-    // Modal  
-    $('#someform, #someform-footer').submit(function (e) {
-        $('div.'+$(this).find('input[type="submit"]').attr("rel")).fadeIn(500);
-        $("body").append("<div id='overlay'></div>");
-        $('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-        $('.modal').show()
-        e.preventDefault()
+
+    $('#someform').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            company: {
+                required: true,
+                minlength: 2
+            },
+            phone: "required",
+            checkbox: "required"
+        },
+        messages: {
+            name: {
+                required: "Пожалуйста, введите свое имя",
+                minlength: jQuery.validator.format("Введите min {0} символов!")
+            },
+            company: {
+                required: "Пожалуйста, введите название своей компании",
+                minlength: jQuery.validator.format("Введите min {0} символов!")
+            },
+            phone: "Пожалуйста, введите свой номер телефона",
+            checkbox: "Подтвердите!"
+        },
+        errorPlacement: function (error, element) {
+            if (element.prop('type') ==='checkbox') {
+                error.insertAfter(element.parent())
+            } else {
+                error.insertAfter(element)
+            }
+        }
     });
-    $('.modal__close').click(function () {
-        $(this).parent().fadeOut(100);
-        $('#overlay').remove('#overlay');
+    $('#someform-footer').validate(
+        {
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                company: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                checkbox: "required"
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите min {0} символов!")
+                },
+                company: {
+                    required: "Пожалуйста, введите название своей компании",
+                    minlength: jQuery.validator.format("Введите min {0} символов!")
+                },
+                phone: "Пожалуйста, введите свой номер тееофона",
+                checkbox: "Подтвердите!"
+            },
+            errorPlacement: function (error, element) {
+                if (element.prop('type') ==='checkbox') {
+                    error.insertAfter(element.parent())
+                } else {
+                    error.insertAfter(element)
+                }
+            }
+        }
+    );
+
+    $('input[name="phone"]').mask("+7 (999) 999-99-99");
+
+
+    $('form').submit(function(e) {
+        var empty = $(this).parent().find("input").filter(function() {
+          return this.value === "";
+        });
+        if (!empty.length) {
+          //Если все графы заполнены, то показываем popup
+            $('.overlay, #consultation').fadeIn('slow');
+            //очищаем все данные текстовых полей, кроме кнопок
+            // $('form input').not(':button, :submit').val('');
+        }
+        e.preventDefault();
+      });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation').fadeOut('slow') 
         location.reload()
-        return false;
-    });
-    
+    })
+});
 
-    // $('[data-modal=consultation]').on('click', function() {
-    //     $('.overlay, #consultation').fadeIn('slow');
-    // });
-    // $('.modal__close').on('click', function() {
-    //     $('.overlay, #consultation').fadeOut('slow') 
-    // })
 
-})
+// $('[data-modal=consultation]').on('click', function() {
+//     $('.overlay, #consultation').fadeIn('slow');
+// });
+
 
 
 let galleryThumbs = new Swiper('.mySwiper', {
@@ -55,43 +127,36 @@ let galleryThumbs = new Swiper('.mySwiper', {
 });
 
 // let mainSlider = document.querySelector('.swiper');
-let galleryTop = new Swiper ('.mySwiper2',  {
+let galleryTop = new Swiper('.mySwiper2', {
     // Optional parameters
     // direction: 'horizontal',
     loop: true,
     // slidesPerVieloop: 1,
     grabCursor: true,
-    spaceBetween: 10,
+    spaceBetween: 20,
     // tion arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     thumbs: {
         swiper: galleryThumbs,
     },
-    // autoplay: {
-    //         delay:5000,
-    //     },
-  });
+    autoplay: {
+            delay:5000,
+        },
+});
 
-
-
-// galleryTop.controller.control = galleryThumbs;
-// galleryThumbs.controller.control = galleryTop;
- 
-// const sliderMomile = document.querySelector('.slider');
-// console.log(sliderMomile);
 
 
 let mobileSlider = new Swiper('.swiperPhone', {
     // Optional parameters
     direction: 'horizontal',
-    spaceBetween: 20,
+    spaceBetween: 30,
     // loop: true,
     observer: true,
     observeParents: true,
     observesSlideChildren: true,
 });
-  
+
 
